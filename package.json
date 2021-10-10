@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write '**/*.ts' '**/*.tsx'"
+    "prettier": "prettier --write '**/*.ts' '**/*.tsx'",
+    "release": "standard-version"
   },
   "dependencies": {
     "@emotion/react": "11.4.1",
