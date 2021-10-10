@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/akshayganeshen/aganeshen.com/compare/v0.1.0...v0.1.1) (2021-10-10)
+
+
+### Features
+
+* add home page title ([7806d0c](https://github.com/akshayganeshen/aganeshen.com/commit/7806d0c263eb20fa53353f5dc1402335d9953266))
+* add link for aganeshen project ([db9ba2b](https://github.com/akshayganeshen/aganeshen.com/commit/db9ba2b8238dc91d47b2aca672c06e03da0584d1))
+
 ## 0.1.0 (2021-10-10)
 
 
