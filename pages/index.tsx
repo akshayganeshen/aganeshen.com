@@ -14,6 +14,7 @@ import * as palette from "@mui/material/colors";
 import { useTheme } from "@mui/material/styles";
 import type { SxProps } from "@mui/system";
 import type { NextPage } from "next";
+import Head from "next/head";
 import React, { useMemo } from "react";
 
 const fullHeight: SxProps = {
@@ -31,6 +32,9 @@ const monospaceFont: SxProps = {
 
 const Home: NextPage = () => (
   <MinSmContainer>
+    <Head>
+      <title>aganeshen</title>
+    </Head>
     <Grid
       container
       direction="column"
