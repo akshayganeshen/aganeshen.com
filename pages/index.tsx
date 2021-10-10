@@ -154,7 +154,11 @@ const HomeContent: React.FC = () => (
       </Typography>
     </Grid>
     <Grid item xs={12} md={8} lg={6}>
-      <Project name="aganeshen" tags={["next.js", "typescript"]} href="#" />
+      <Project
+        name="aganeshen"
+        tags={["next.js", "typescript"]}
+        href="https://github.com/akshayganeshen/aganeshen.com"
+      />
     </Grid>
     <Grid item xs={12} md={8} lg={6}>
       <Project
