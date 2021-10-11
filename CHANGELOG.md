@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/akshayganeshen/aganeshen.com/compare/v0.1.1...v0.1.2) (2021-10-11)
+
+
+### Features
+
+* set theme primary and secondary ([2d83150](https://github.com/akshayganeshen/aganeshen.com/commit/2d83150cc6927d1d4cc84e1d7e06eb5bf7bb5de4))
+
 ### [0.1.1](https://github.com/akshayganeshen/aganeshen.com/compare/v0.1.0...v0.1.1) (2021-10-10)
 
 
