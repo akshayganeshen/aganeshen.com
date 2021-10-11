@@ -1,4 +1,5 @@
 import CssBaseline from "@mui/material/CssBaseline";
+import * as palette from "@mui/material/colors";
 import {
   createTheme,
   responsiveFontSizes,
@@ -12,6 +13,8 @@ const theme = responsiveFontSizes(
   createTheme({
     palette: {
       mode: "dark",
+      primary: { main: palette.deepPurple[700] },
+      secondary: { main: palette.orange[700] },
     },
     typography: {
       fontFamily: "sans-serif",
