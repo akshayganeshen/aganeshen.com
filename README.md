@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# `aganeshen.com`
 
-## Getting Started
+Next.js webapp powering [aganeshen.com](https://www.aganeshen.com).
 
-First, run the development server:
+## Developing
 
-```bash
-npm run dev
-# or
+This repository uses Yarn as the package manager.
+
+The package scripts include the default Next.js scripts to run the application
+in development (`yarn dev`), as well as producing and running a production
+build (`yarn build` and `yarn start`).
+
+```sh
+yarn install
 yarn dev
+# $ next dev
+# ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+# ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+When updating the repository `dependencies`, ensure the packages are specified
+with fixed versions (e.g. `"some-package@1.0.0"`). When updating
+`devDependencies` with type definitions, ensure these packages use fixed
+versions as well. For all other `devDependencies` (scripts, utilities, etc.),
+use a version range that is appropriate for the package
+(e.g. `"some-package@^1.0.0"`).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+All sources should be contained in the `src/` directory. For new pages, add a
+new page in `src/pages`. For new components, add the new component to its own
+directory within `src/components`. When making modifications to any of these
+files, re-run `yarn prettier` to ensure the formatting is consistent.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+All commits should use conventional commits. This allows the release tooling
+(`standard-version`) to pick up the changes and determine the appropriate
+version bump for it.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Releases
 
-## Learn More
+Releases should be cut on the `main` branch when deploying new versions. To
+create a new release, simply run `yarn release`. This will generate the
+changelog for the release and tag the release version. Ensure that this
+commit and tag is pushed back to the repository.
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+yarn release
+git push --follow-tags origin main
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploying
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Deployments are performed automatically on Netlify whenever there are changes
+to the `main` branch.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+All changes to the `main` branch should end with a release commit. This allows
+Netlify to report the application version for each deployment.
